@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+void main()=> runApp(const Listviewapp_by_James_Macalaguing());
+
+
+class Listviewapp_by_James_Macalaguing extends StatelessWidget {
+  const Listviewapp_by_James_Macalaguing({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: new ThemeData(scaffoldBackgroundColor: Color(0xFF0F1F2F),
+          listTileTheme: const ListTileThemeData(
+            textColor: Colors.white,
+            iconColor: Colors.white,
+          ),
+        ),
+      home : Scaffold(
+      appBar: AppBar(
+      leading: Icon(Icons.home, color: Colors.white,),
+        title: Text('Hello World', style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.blue
+
+    ),
+        body: ListView(
+          children: [
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.white,
+                  child: Icon(Icons.person_outline_outlined, color: Colors.black,)),
+                title: Text('Dan'),
+                subtitle:Text('3 Letters'),),
+            ListTile(
+              leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.person_outline_outlined, color: Colors.black,)),
+              title: Text('Reyes'),
+              subtitle:Text('5 Letters'),),
+            ListTile(
+              leading: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Icon(Icons.person_outline_outlined, color: Colors.black,)),
+              title: Text('John'),
+              subtitle:Text('5 Letters'),)
+          ],
+        ),
+
+    )
+    );
+  }
+}
